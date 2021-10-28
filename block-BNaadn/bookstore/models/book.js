@@ -8,8 +8,10 @@ var bookSchema=new Schema({
     pages:Number,
     publication:String,
     cover_image:String,
-    category:[{type: Schema.Types.ObjectId,required:true,ref:'Category'}],
-    author:[{type:Schema.Types.ObjectId,required:true,ref:'Author'}],
+    categoryName:[{type:String,required:true}],
+    categoryId:[{type: Schema.Types.ObjectId,required:true,ref:'Category'}],
+    authorName:{type:String,required:true},
+    authorId:[{type:Schema.Types.ObjectId,required:true,ref:'Author'}],
 
 })
 
