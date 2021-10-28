@@ -3,7 +3,7 @@ var Schema=mongoose.Schema;
 
 var categorySchema=new Schema({
     category:{type:String,required:true},
-    bookId:{type:Schema.Types.ObjectId,required:true,ref:'Book'}
+    booksId:[{type:Schema.Types.ObjectId,required:true,ref:'Book'}]
 },{timestamps:true})
 
 
